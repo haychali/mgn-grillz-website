@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>M.G.N Grillz | Men’s Custom Grillz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* === Global Styles === */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: #020617;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* === Navbar === */
+    header {
+      border-bottom: 1px solid #1f2937;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+      background: rgba(2, 6, 23, 0.9);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    .logo span {
+      color: #60a5fa;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      color: #9ca3af;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    .btn-nav {
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid #60a5fa;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .btn-nav:hover {
+      background: #60a5fa;
+      color: #020617;
+    }
+
+    /* === Hero === */
+    .hero {
+      padding: 3.5rem 0 2.5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid #1f2937;
+      background: rgba(15, 23, 42, 0.8);
+      font-size: 0.75rem;
+      color: #9ca3af;
+      margin-bottom: 1rem;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero h1 span {
+      color: #60a5fa;
+    }
+
+    .hero-sub {
+      color: #9ca3af;
+      margin-bottom: 1.5rem;
+      max-width: 480px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .btn-primary {
+      padding: 0.75rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, #38bdf8, #1d4ed8);
+      color: #f9fafb;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      padding: 0.75rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid #374151;
+      background: transparent;
+      color: #e5e7eb;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .hero-card {
+      border-radius: 1.25rem;
+      border: 1px solid #1f2937;
+      background: radial-gradient(circle at top, #1e293b, #020617);
+      padding: 1.75rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-tag {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-card-main {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-grid-mini {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      font-size: 0.75rem;
+    }
+
+    .mini-stat {
+      padding: 0.75rem;
+      border-radius: 0.75rem;
+      border: 1px solid #1f2937;
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .mini-label {
+      color: #9ca3af;
+      font-size: 0.7rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .mini-value {
+      font-weight: 600;
+    }
+
+    /* === Section Generic === */
+    section {
+      padding: 2.75rem 0;
+      border-top: 1px solid #020617;
+      border-bottom: 1px solid #020617;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.75rem;
+      gap: 1rem;
+    }
+
+    .section-heading h2 {
+      font-size: 1.4rem;
+    }
+
+    .section-heading p {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      max-width: 420px;
+    }
+
+    /* === Styles Grid === */
+    .styles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .style-card {
+      border-radius: 1rem;
+      border: 1px solid #1f2937;
+      background: #020617;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .style-tag {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #9ca3af;
+      margin-bottom: 0.4rem;
+    }
+
+    .style-title {
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .style-desc {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      margin-bottom: 0.5rem;
+    }
+
+    .style-line {
+      height: 1px;
+      background: linear-gradient(to right, #1f2937, #60a5fa, #1f2937);
+      margin: 0.5rem 0 0.75rem;
+    }
+
+    .style-meta {
+      font-size: 0.75rem;
+      color: #6b7280;
+    }
+
+    /* === How It Works === */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+      font-size: 0.85rem;
+    }
+
+    .step {
+      border-radius: 0.9rem;
+      border: 1px solid #1f2937;
+      padding: 0.9rem;
+      background: #020617;
+    }
+
+    .step-num {
+      font-size: 0.8rem;
+      color: #60a5fa;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.25rem;
+    }
+
+    .step-title {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .step-desc {
+      color: #9ca3af;
+      font-size: 0.8rem;
+    }
+
+    /* === Pricing === */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+
+    .price-card {
+      border-radius: 1rem;
+      border: 1px solid #1f2937;
+      padding: 1.2rem;
+      background: #020617;
+    }
+
+    .price-card.highlight {
+      border-color: #60a5fa;
+      box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
+    }
+
+    .price-label {
+      font-size: 0.75rem;
+      color: #60a5fa;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 0.25rem;
+    }
+
+    .price-title {
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .price-value {
+      font-size: 1.25rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .price-note {
+      font-size: 0.75rem;
+      color: #6b7280;
+      margin-bottom: 0.6rem;
+    }
+
+    .price-list {
+      list-style: none;
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    .price-list li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* === FAQ & Contact === */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 2rem;
+    }
+
+    .faq-item {
+      margin-bottom: 0.9rem;
+    }
+
+    .faq-q {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.1rem;
+    }
+
+    .faq-a {
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    .contact-card {
+      border-radius: 1rem;
+      border: 1px solid #1f2937;
+      padding: 1.25rem;
+      background: radial-gradient(circle at top left, #0f172a, #020617);
+      font-size: 0.85rem;
+    }
+
+    .contact-label {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-main {
+      margin-bottom: 0.6rem;
+    }
+
+    .contact-main span {
+      color: #60a5fa;
+    }
+
+    .contact-line {
+      margin: 0.25rem 0;
+    }
+
+    .contact-small {
+      font-size: 0.75rem;
+      color: #6b7280;
+    }
+
+    /* === Footer === */
+    footer {
+      border-top: 1px solid #1f2937;
+      padding: 1.5rem 0;
+      font-size: 0.75rem;
+      color: #6b7280;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .styles-grid,
+      .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      nav ul {
+        display: none;
+      }
+
+      .styles-grid,
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        M.G.N <span>GRILLZ</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#styles">Styles</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="btn-nav">Book Fit Check</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Custom grillz for men • EST 2025
+        </div>
+        <h1>
+          Upgrade your smile, <span>elevate your presence.</span>
+        </h1>
+        <p class="hero-sub">
+          M.G.N Grillz creates custom silver caps for men who want subtle flex or
+          full statement pieces – built to match your face, style and lifestyle.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary">DM to book a mould</a>
+          <a href="#styles" class="btn-ghost">View men’s styles</a>
+        </div>
+
+        <p class="hero-note">
+          Based in Derby • Mobile & pop-up appointments • Limited slots per week
+        </p>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-tag">Men’s grillz collection</div>
+        <div class="hero-card-main">
+          Clean silver caps designed for everyday wear or night-time shine. Pick
+          your tooth, your finish and your energy – we handle the rest.
+        </div>
+        <div class="hero-grid-mini">
+          <div class="mini-stat">
+            <div class="mini-label">Look</div>
+            <div class="mini-value">Subtle to full set</div>
+            <div class="mini-label">Single / multi tooth</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-label">Material</div>
+            <div class="mini-value">High-polish silver</div>
+            <div class="mini-label">Comfort fit mould</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-label">Who it’s for</div>
+            <div class="mini-value">Men 18+</div>
+            <div class="mini-label">Streetwear • Nightlife • Events</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STYLES -->
+  <section id="styles">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Men’s grillz styles</h2>
+        <p>
+          From a low-key single tooth flex to full top-row confidence, pick a
+          look that matches how loud you want to go.
+        </p>
+      </div>
+
+      <div class="styles-grid">
+        <div class="style-card">
+          <div>
+            <div class="style-tag">Everyday flex</div>
+            <div class="style-title">Single Tooth Cap</div>
+            <div class="style-desc">
+              Clean, simple and subtle. One tooth capped to add character
+              without shouting.
+            </div>
+            <div class="style-line"></div>
+          </div>
+          <div class="style-meta">
+            Ideal for: first-timers, casual flex, work-friendly looks.
+          </div>
+        </div>
+
+        <div class="style-card">
+          <div>
+            <div class="style-tag">Balanced look</div>
+            <div class="style-title">Two–Four Tooth Set</div>
+            <div class="style-desc">
+              Symmetry and presence. Add grillz to canines or front teeth for a
+              sharper smile.
+            </div>
+            <div class="style-line"></div>
+          </div>
+          <div class="style-meta">
+            Ideal for: nightlife, photos, music videos, content.
+          </div>
+        </div>
+
+        <div class="style-card">
+          <div>
+            <div class="style-tag">Full statement</div>
+            <div class="style-title">Top Row Set</div>
+            <div class="style-desc">
+              Full top-row coverage. All eyes on your smile when you walk in the
+              room.
+            </div>
+            <div class="style-line"></div>
+          </div>
+          <div class="style-meta">
+            Ideal for: events, performances, full drip moments.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <div class="container">
+      <div class="section-heading">
+        <h2>How it works</h2>
+        <p>
+          Simple 4-step process from idea to fitted grillz. No pressure, no
+          awkward energy – just clean service and communication.
+        </p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01 • Chat</div>
+          <div class="step-title">DM & style decision</div>
+          <div class="step-desc">
+            You send a DM with the look you want (pics welcome). We confirm
+            teeth, style and budget.
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">02 • Fit</div>
+          <div class="step-title">Mould appointment</div>
+          <div class="step-desc">
+            We arrange a meet-up or pop-up slot. A mould is taken to match your
+            teeth for a secure, comfortable fit.
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">03 • Create</div>
+          <div class="step-title">Custom build</div>
+          <div class="step-desc">
+            Your grillz are crafted based on your mould and design choices
+            (tooth count, shape, finish).
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">04 • Fit Check</div>
+          <div class="step-title">Collection & adjustments</div>
+          <div class="step-desc">
+            You try on the grillz, we check comfort and look. Minor adjustments
+            made if needed.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Transparent pricing for men’s grillz</h2>
+        <p>
+          Final quotes depend on tooth count and design, but this gives you a
+          realistic range before you DM.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-label">Starter</div>
+          <div class="price-title">Single Tooth Cap</div>
+          <div class="price-value">From £xx</div>
+          <div class="price-note">Perfect for your first grill.</div>
+          <ul class="price-list">
+            <li>• 1 custom silver cap</li>
+            <li>• Basic polish finish</li>
+            <li>• Fit check included</li>
+          </ul>
+        </div>
+
+        <div class="price-card highlight">
+          <div class="price-label">Most popular</div>
+          <div class="price-title">2–4 Tooth Set</div>
+          <div class="price-value">From £xx</div>
+          <div class="price-note">
+            Balance between subtle and bold – for men who want presence.
+          </div>
+          <ul class="price-list">
+            <li>• 2–4 custom caps</li>
+            <li>• Matching shape & symmetry</li>
+            <li>• Comfort fit mould</li>
+          </ul>
+        </div>
+
+        <div class="price-card">
+          <div class="price-label">Full statement</div>
+          <div class="price-title">Top Row Set</div>
+          <div class="price-value">From £xx</div>
+          <div class="price-note">All eyes on your smile.</div>
+          <ul class="price-list">
+            <li>• Full top-row grillz</li>
+            <li>• Custom design details</li>
+            <li>• Perfect fit check session</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ + CONTACT -->
+  <section id="contact">
+    <div class="container two-col">
+      <div>
+        <div class="section-heading">
+          <h2>Questions men usually ask</h2>
+          <p>Quick answers before you DM. If you’re unsure, just ask.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Do the grillz damage my real teeth?</div>
+          <div class="faq-a">
+            No – they’re made to sit over your teeth. You still need good
+            hygiene and to follow care instructions, but they’re not permanent.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Can I eat or sleep in them?</div>
+          <div class="faq-a">
+            They’re designed for wear, photos and events – not for chewing food
+            or sleeping. You’ll be told when to remove them.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">How long does the process take?</div>
+          <div class="faq-a">
+            After your mould, the build time depends on complexity. We’ll give
+            you a realistic time frame when you book.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Is this only for men?</div>
+          <div class="faq-a">
+            This page focuses on men’s styles, but we work with anyone. Just let
+            us know the vibe you’re going for.
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="contact-label">Book your men’s grillz fit</div>
+        <div class="contact-main">
+          Send a DM with <span>“MEN GRILLZ FIT”</span>, plus a quick idea of the
+          look you want (single tooth / 2–4 / full top).
+        </div>
+
+        <div class="contact-line">
+          Instagram: <strong>@mgn_grillz</strong>
+        </div>
+        <div class="contact-line">
+          Email: <strong>info@mgn-grillz.com</strong>
+        </div>
+        <div class="contact-line">
+          Location: <strong>Derby (mobile & meet-ups)</strong>
+        </div>
+
+        <p class="contact-small">
+          You’ll get: price range, time frame, and available slots. No pressure
+          to commit – ask anything first.
+        </p>
+
+        <br />
+        <a href="#top" class="btn-primary">DM Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2025 M.G.N Grillz • Upgrade Your Smile, Elevate Your Style.</div>
+      <div>Men’s grillz collection • Derby, UK</div>
+    </div>
+  </footer>
+</body>
+</html>
